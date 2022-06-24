@@ -52,7 +52,6 @@ module "aws-ec2-sg" {
 module "ec2-instance" {
   source                 = "terraform-aws-modules/ec2-instance/aws"
   name                   = var.ec2_name
-  instance_count         = var.instance_count
   ami                    = var.ami_id
   instance_type          = var.instance_type
   key_name               = module.aws-key-pair.key_pair_key_name
